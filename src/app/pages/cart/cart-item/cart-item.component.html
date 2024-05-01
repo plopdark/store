@@ -1,0 +1,10 @@
+<div class="cart__item">
+  <p class="cart__name">{{ cartItem.productTitle }} x {{ cartItem.qty }}</p>
+  <button class="cart__button remove" type="button" (click)="decreaseQty()">
+    Remove
+  </button>
+  <button class="cart__button add" type="button" (click)="increaseQty()">
+    Add
+  </button>
+  <p class="cart__price">{{ priceHolder | currency }}</p>
+</div>

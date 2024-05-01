@@ -1,0 +1,38 @@
+@import "../../styles/mixin.scss";
+
+.main {
+  &__container {
+    @include container;
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    justify-content: end;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  &__button {
+    font-size: 20px;
+    width: 60px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #64748b;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #64748b;
+    border-radius: 5px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

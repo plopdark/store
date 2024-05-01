@@ -1,0 +1,64 @@
+@import "../../styles/mixin.scss";
+
+p-button {
+  padding: 5px;
+  border: none;
+}
+
+.cart {
+  font-family: Arial, Helvetica, sans-serif;
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__order {
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  &__items {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__sum {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+
+  &__userInfo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-inpt {
+      font-size: 20px;
+      padding: 5px;
+      width: 500px;
+    }
+
+    &-btn {
+      width: 80px;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 10px;
+      background-color: #05a430;
+      border: 1px solid #05a430;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

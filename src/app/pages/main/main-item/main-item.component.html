@@ -1,0 +1,22 @@
+<div class="main__item">
+  <img
+    [src]="productItem.imageUrl"
+    alt="image"
+    class="main__item-image"
+    width="100%"
+  />
+  <p class="main__item-title">
+    <span>{{ productItem.title }}</span>
+  </p>
+  <p class="main__item-price">
+    <strong>{{ productItem.price | currency }}</strong>
+  </p>
+  <p class="main__item-desc">
+    {{ productItem.description }}
+  </p>
+  <div class="main__item-button">
+    <button type="button" class="main__item-button" (click)="handleAddToCart()">
+      Add to Cart
+    </button>
+  </div>
+</div>

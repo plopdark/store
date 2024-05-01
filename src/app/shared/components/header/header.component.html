@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="header__buttons">
+    <a class="header__button" *ngIf="!isCart()">
+      <p-button
+        pButton
+        label="Cart"
+        severity="secondary"
+        size="large"
+        routerLink="/cart"
+      ></p-button>
+      <div class="header__icon" *ngIf="cartItemCount > 0 && !isCart()">
+        <p>{{ cartItemCount }}</p>
+      </div>
+    </a>
+  </div>
+</div>

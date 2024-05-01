@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="main__header">
+    <app-header [title]="'Cart'"></app-header>
+  </div>
+  <div class="main__container">
+    <div class="main__buttons">
+      <span>Sort by </span>
+      <button class="main__button" (click)="sortByDate()">Date</button>
+      <button class="main__button" (click)="sortByPrice()">Price</button>
+    </div>
+    <div class="main__items">
+      <div class="main__item" *ngFor="let product of productList">
+        <app-main-item [productItem]="product"></app-main-item>
+      </div>
+    </div>
+  </div>
+</div>

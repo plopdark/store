@@ -1,0 +1,49 @@
+.main {
+  &__item {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    max-height: 800px;
+  }
+
+  &__item-image {
+    width: 300px;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__item-price {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__item-desc {
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__item-button {
+    color: #fff;
+    border: 1px solid #3b82f6;
+    border-radius: 10px;
+    background-color: #3b82f6;
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+
+    button {
+      padding: 5px;
+    }
+  }
+}

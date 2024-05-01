@@ -1,0 +1,63 @@
+<div class="cart">
+  <div class="cart__header">
+    <app-header></app-header>
+  </div>
+  <div class="cart__container">
+    <p-button
+      pButton
+      label="Back"
+      severity="secondary"
+      routerLink="/store"
+    ></p-button>
+    <div class="cart__order">
+      <div *ngIf="cartItems.length === 0" class="cart__alert">
+        No items added
+      </div>
+      <ol class="cart__items" *ngIf="cartItems.length > 0">
+        <li class="cart__item" *ngFor="let item of cartItems">
+          <app-cart-item
+            [cartItem]="item"
+            [cartTotal]="cartTotal"
+            [priceHolder]="item.priceHolder"
+            (remove)="removeItem($event)"
+            (itemRemoved)="decreaseCartTotal($event)"
+            (itemAdded)="increaseCartTotal($event)"
+          ></app-cart-item>
+        </li>
+      </ol>
+      <div class="cart__sum" *ngIf="cartItems.length > 0">
+        <span>Total cost is {{ cartTotal | currency }}</span>
+      </div>
+      <div class="cart__userInfo" *ngIf="cartItems.length > 0">
+        <h3>Your info</h3>
+        <div class="cart__userInfo-input">
+          <input
+            type="text"
+            class="cart__userInfo-inpt"
+            placeholder="Your name"
+            [formControl]="name"
+          />
+        </div>
+        <div class="cart__userInfo-input">
+          <input
+            type="email"
+            class="cart__userInfo-inpt"
+            placeholder="Your email"
+            [formControl]="email"
+          />
+        </div>
+        <div class="cart__userInfo-input">
+          <input
+            type="password"
+            class="cart__userInfo-inpt"
+            placeholder="Your password"
+            [formControl]="password"
+          />
+        </div>
+        <div class="cart__userInfo-button">
+          <button class="cart__userInfo-btn" (click)="sendOrder()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
